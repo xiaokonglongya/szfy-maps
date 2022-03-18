@@ -1,0 +1,106 @@
+{
+    "examinationData": [
+        {
+            "id": "paperPack001",
+            "type": "同步备课",
+            "thumbnail": "./paperPack/001.png",
+            "name": "2021-2022学年高一语文链接素材",
+            "date": "2022-03-03",
+            "viewnNum": "343",
+            "paperList": [
+                {
+                    "id": "paper001001",
+                    "name": "高中语文试卷",
+                    "label": "更新至第8份",
+                    "isTotal":false,
+                    "date": "2022-03-03",
+                    "fileUrl": "https//storage.obs.huaweiyun.com"
+                },
+                {
+                    "id": "paper001002",
+                    "name": "高中数学试卷",
+                    "label": "更新至第8份",
+                    "isTotal":false,
+                    "date": "2022-03-03",
+                    "fileUrl": "https//storage.obs.huaweiyun.com"
+                },
+                {
+                    "id": "paper001003",
+                    "name": "高中英语试卷",
+                    "label": "30份全",
+                    "isTotal":true,
+                    "date": "2022-03-03",
+                    "fileUrl": "https//storage.obs.huaweiyun.com"
+                }
+            ]
+        },
+        {
+            "id": "paperPack002",
+            "type": "阶段测试",
+            "thumbnail": "./paperPack/002.png",
+            "name": "2021-2022学年高一语文链接素材",
+            "date": "2022-03-03",
+            "viewnNum": "343",
+            "paperList": [
+                {
+                    "id": "paper002001",
+                    "name": "高中语文试卷",
+                    "label": "更新至第8份",
+                    "isTotal":false,
+                    "date": "2022-03-03",
+                    "fileUrl": "https//storage.obs.huaweiyun.com"
+                },
+                {
+                    "id": "paper002002",
+                    "name": "高中数学试卷",
+                    "label": "更新至第8份",
+                    "isTotal":false,
+                    "date": "2022-03-03",
+                    "fileUrl": "https//storage.obs.huaweiyun.com"
+                },
+                {
+                    "id": "paper002003",
+                    "name": "高中英语试卷",
+                    "label": "30份全",
+                    "isTotal":true,
+                    "date": "2022-03-03",
+                    "fileUrl": "https//storage.obs.huaweiyun.com"
+                }
+            ]
+        },
+        {
+            "id": "paperPack003",
+            "type": "排行榜",
+            "thumbnail": "./paperPack/003.png",
+            "name": "2021-2022学年高一语文链接素材",
+            "date": "2022-03-03",
+            "viewnNum": "343",
+            "paperList": [
+                {
+                    "id": "paper003001",
+                    "name": "高中语文试卷",
+                    "label": "更新至第8份",
+                    "isTotal":false,
+                    "date": "2022-03-03",
+                    "fileUrl": "https//storage.obs.huaweiyun.com"
+                },
+                {
+                    "id": "paper003002",
+                    "name": "高中数学试卷",
+                    "label": "更新至第8份",
+                    "isTotal":false,
+                    "date": "2022-03-03",
+                    "fileUrl": "https//storage.obs.huaweiyun.com"
+                },
+                {
+                    "id": "paper003003",
+                    "name": "高中英语试卷",
+                    "label": "30份全",
+                    "isTotal":true,
+                    "date": "2022-03-03",
+                    "fileUrl": "https//storage.obs.huaweiyun.com"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,77 @@
+{
+  "logo": "/logo.png",
+  "siteName": "校外机构管理系统",
+  "menus": [
+    {
+      "id": "category201",
+      "name": "德育"
+    },
+    {
+      "id": "category202",
+      "name": "智育"
+    },
+    {
+      "id": "category203",
+      "name": "体育"
+    },
+    {
+      "id": "category204",
+      "name": "美育"
+    },
+    {
+      "id": "category205",
+      "name": "劳育"
+    }
+  ],
+  "banners": [
+    "./assets/banner/01.png"
+  ],
+  "indexCategory": [
+    {
+      "id": "category101",
+      "logo": "./assets/category/101.png",
+      "name": "政府类课程"
+    },
+    {
+      "id": "category102",
+      "logo": "./assets/category/102.png",
+      "name": "知名企业类课程"
+    },
+    {
+      "id": "category103",
+      "logo": "./assets/category/103.png",
+      "name": "行业协会课程"
+    },
+    {
+      "id": "category104",
+      "logo": "./assets/category/104.png",
+      "name": "科研机构课程"
+    },
+    {
+      "id": "category105",
+      "logo": "./assets/category/105.png",
+      "name": "著名高校课程"
+    },
+    {
+      "id": "category106",
+      "logo": "./assets/category/106.png",
+      "name": "优质机构课程"
+    },
+    {
+      "id": "category107",
+      "logo": "./assets/category/107.png",
+      "name": "专家大师课程"
+    },
+    {
+      "id": "category108",
+      "logo": "./assets/category/108.png",
+      "name": "地方特色课程"
+    },
+    {
+      "id": "category109",
+      "logo": "./assets/category/109.png",
+      "name": "精品题库"
+    }
+  ],
+  "news":[]
+}
