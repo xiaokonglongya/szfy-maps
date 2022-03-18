@@ -41,7 +41,7 @@
   </div>
 </template>
 <script lang="ts" setup>
-import Map from "@/components/maps/map.vue";
+import Map from "@/components/Map/Map.vue";
 import { getMapsDateByDate } from "@/api/home";
 import { onMounted, ref, defineExpose, h, computed } from "vue";
 import { useNotification, useMessage, NAvatar } from "naive-ui";
