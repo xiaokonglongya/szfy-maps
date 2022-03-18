@@ -54,7 +54,7 @@ export default {
         strokeColor: "white",
         strokeWeight: 2,
         strokeOpacity: 0.5,
-        fillColor: "rgba(0,0,255,1)",
+        fillColor: "rgba(231,50,45,1)",
         fillOpacity: 0.5,
         zIndex: 10,
         bubble: true,
