@@ -24,7 +24,9 @@ onMounted(() => {
   getData();
 });
 const getData = async () => {
-  let result = await getMapsDateByDate({ pageSize: 999 });
+  let result = await getMapsDateByDate<{ rows: PeopleTypes[] }>({
+    pageSize: 999,
+  });
   let { rows = [] } = result;
   peopleData.value = rows;
   setTimeout(() => {
