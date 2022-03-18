@@ -66,6 +66,10 @@ export default {
         this.$emit("markerClick", info);
       });
     },
+    clearMarkers(lnglat) {
+    this.map.clearMap()
+    //   this.map.remove(lnglat);
+    },
   },
 };
 </script>
@@ -74,6 +78,6 @@ export default {
   padding: 0px;
   margin: 0px;
   width: 100%;
-  height: 800px;
+  height: 100%;
 }
 </style>
