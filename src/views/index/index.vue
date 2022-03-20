@@ -84,13 +84,15 @@ const getData = async (date?) => {
   peopleData.value = rows;
   setTimeout(() => {
     addMarker(rows);
+   
+    mapRef.value.createMapMarkerClusterer(rows)
   }, 1000);
 };
 const addMarker = (data: PeopleTypes[]) => {
-  for (let i = 0; i < data.length; i++) {
-    let lnglat = data[i].lonLat.split(",").map((e) => Number(e));
-    mapRef.value.addMarker(lnglat, data[i].address, data[i]);
-  }
+  // for (let i = 0; i < data.length; i++) {
+  //   let lnglat = data[i].lonLat.split(",").map((e) => Number(e));
+  //   mapRef.value.addMarker(lnglat, data[i].address, data[i]);
+  // }
 };
 const clearMarkers = (data: PeopleTypes[]) => {
   // for (let i = 0; i < data.length; i++) {
@@ -101,7 +103,8 @@ const clearMarkers = (data: PeopleTypes[]) => {
 const showNatification = (data) => {
   let lonLat = data.lonLat;
   let result = peopleData.value.filter((e) => e.lonLat === lonLat);
-  if (!result) return;
+  console.log("🚀 ~ file: index.vue ~ line 106 ~ showNatification ~ result", result)
+  if (result.length===0) return;
   let title = result.map((e) => e.no).join(",");
   let content = result
     .map((e) => `病例${e.no}(${e.age},${e.gender})`)
