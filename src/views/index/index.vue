@@ -1,27 +1,25 @@
 <template>
   <div class="pages">
     <div class="date" :class="{ date__hidden: hiddenMenu }">
-      <!-- <div class="close-icon" @click="hiddenMenu = true">
-          <n-icon size="22">
-            <CloseCircleOutline />
-          </n-icon>
-        </div> -->
       <n-h4 prefix="bar" align-text> 切换日期 </n-h4>
       <n-date-picker
         v-model:value="timestamp"
-        type="date"
+        type="daterange"
         :on-update:value="dateChange"
+        :is-date-disabled="disablePreviousDate"
       />
       <n-h4 prefix="bar" align-text> 确诊人员 </n-h4>
       <div class="people-list">
         <n-scrollbar style="max-height: calc(100%)" v-if="peopleData.length">
-          <div
-            class="date-people-item"
-            v-for="item in peopleData"
-            :key="item._id"
-          >
-            病例{{ item.no }} {{ item.address }}
-          </div>
+          <n-space vertical>
+            <n-card
+              content-style="padding: 10px;"
+              v-for="item in peopleData"
+              :key="item._id"
+            >
+              {{ item.time_str }}病例{{ item.no }} {{ item.address }}
+            </n-card>
+          </n-space>
         </n-scrollbar>
         <n-empty description="暂无更多数据" v-else>
           <template #extra>
@@ -50,7 +48,7 @@ import { CloseCircleOutline, BuildSharp } from "@vicons/ionicons5";
 const mapRef = ref();
 const message = useMessage();
 const notification = useNotification();
-const timestamp = ref(new Date().getTime());
+const timestamp = ref([new Date().getTime(), new Date().getTime()]);
 interface PeopleTypes {
   _id: string;
   gender: string;
@@ -59,6 +57,7 @@ interface PeopleTypes {
   no: string;
   age: string;
   date: string;
+  time_str: string;
 }
 const peopleData = ref<PeopleTypes[]>([]);
 const hiddenMenu = ref(true);
@@ -66,6 +65,12 @@ onMounted(() => {
   getData();
 });
 const dateChange = (value) => {
+  console.log("🚀 ~ file: index.vue ~ line 69 ~ dateChange ~ value", value);
+  console.log(
+    "🚀 ~ file: index.vue ~ line 69 ~ dateChange ~ value",
+    new Date(value)
+  );
+
   timestamp.value = value;
   clearMarkers(peopleData.value);
   getData(value);
@@ -113,6 +118,9 @@ const showNatification = (data) => {
   });
   // let
 };
+const disablePreviousDate = (ts: number) => {
+  return ts > Date.now();
+};
 </script>
 <style lang="less">
 .pages {
@@ -121,9 +129,11 @@ const showNatification = (data) => {
   .date {
     @media screen and (max-device-width: 960px) {
       width: 200px;
+      max-width: 240px;
     }
-    @media screen and (min-width: 1200px) {
-      width: 300px;
+    @media screen and (min-width: 960px) {
+      width: 25%;
+      max-width: 25%;
     }
     padding: 20px;
     position: absolute;
